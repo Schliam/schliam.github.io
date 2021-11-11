@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SCHLIAM'S COOL HTML REFERENCE PAGE</title>  
+    <link rel="stylesheet" href="styles/tut_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
+  </head>
+    
+  <body>
+    <header>
+    <h1 id='page top'>SCHLIAM'S COOL HTML REFERENCE PAGE</h1>
+      <p>I promise there will be a quick explanation here at some point about what tags are and what "self-closing" means</p>
+    <nav> 
+    <h3>Quick Links</h3>
+      <ul>
+        <li><a href='#basic tags'>Basic tags</a></li>
+          <ul>       
+            <li><a href='#lists'>Lists</a></li>
+            <li><a href='#media'>Media</a></li>
+          </ul>
+        <li><a href='#basic attributes'>Basic attributes</a></li>
+        <li><a href='#tables'>Tables</a></li>
+        <li><a href='#forms'>Forms</a></li>
+          <ul>
+            <li><a href='#form validation'>Form validation</a></li>
+          </ul>
+        <li><a href='#semantic html'>Semantic HTML</a></li>
+      </ul>
+    </nav> 
+    </header>
+      
+    <main> 
+    <h2 id='basic tags'>BASIC TAGS</h2>
+      <ul>  
+        <li><strong>&lt;!DOCTYPE html&gt;</strong> Required document type declaration at the start of any HTML document. Unless specified otherwise, the browser will assume HTML5 (for now!). Self-closing. </li>
+        <li> <strong>&lt;html&gt;</strong> Should contain all other elements of an HTML document.</li>
+        <li> <strong>&lt;head&gt;</strong> Contains metadata like the title of the document and links to stylesheets.</li>
+        <li> <strong>&lt;title&gt;</strong> Contains the title of a page, as seen on a browser tab. Must be contained in the &lt;head&gt; element.</li>
+        <li> <strong>&lt;body&gt;</strong> The whole enchilada. Everything displayed on the page is in here.</li>
+        <li> <strong>&lt;!-- (insert comment here) --&gt;</strong> Used to add comments. Self-closing. </li>
+        <li> <strong>&lt;h1&gt; through &lt;h6&gt;</strong> Used to create headings. h1 is for main headings, 2-6 are subheadings. </li>
+        <li> <strong>&lt;p&gt;</strong> Paragraphs. Self-explanatory. </li>
+        <li> <strong>&lt;span&gt;</strong> Contains short pieces of text or other HTML. Used to separate small pieces of content that are on the same line as other content. </li>
+        <li> <strong>&lt;div&gt;</strong> A way of grouping elements together. These and spans don’t change anything visually unless a CSS style is applied. </li>
+        <li> <strong>&lt;em&gt;</strong> (Typically) <em>italicises</em> text inside it. </li>
+        <li> <strong>&lt;strong&gt;</strong> (Typically) <strong>boldens</strong> text inside it. </li>
+        <li> <strong>&lt;br&gt;</strong> Line break. Self-closing. </li>
+      </ul>
+      
+      <h4 id='lists'>LISTS</h4>  
+      <ul>
+        <li> <strong>&lt;ul&gt;</strong> Contains an unordered (bulleted) list. This page is full of them!</li>
+          <ul>
+            <li>You can nest lists by simply starting a new list within an existing list tag.</li>
+              <ul>
+                <li>The different nest levels get different icons!</li>
+              </ul>
+          </ul>
+        <li> <strong>&lt;ol&gt;</strong> Contains an ordered (numbered) list. </li>
+          <ol>
+            <li>This is what they look like in practice.</li>
+            <li>They're automatically numbered, so you can just worry about the list items themselves!</li>
+          </ol>
+        <li> <strong>&lt;li&gt;</strong> Marks a list item. Should always be a direct child of <strong>&lt;ul&gt;</strong> or <strong>&lt;ol&gt;</strong>. This page is full of them!<!--(Or <menu>?)--></li>
+      </ul>
+      
+      <h4 id='media'>MEDIA</h4>  
+      <ul>
+        <li><strong>&lt;img&gt;</strong> (or &lt;/img&gt;) Displays an image. Self-closing. Requires a <strong>src</strong> attribute. </li>
+          <figure>
+            <img src='Images/Chippy%20Idle%20Cropped.gif' id='chippy' alt='A gif of a dancing anthropomorphic poker chip.'>
+            <figcaption>You can use gifs, too!</figcaption>
+          </figure>
+          
+        <li><strong>&lt;video&gt;</strong> Displays a video. Requires a <strong>src</strong> attribute. Can include text between tags that will show if the  video cannot load (such as “Video not supported”). </li>
+          <figure>
+            <video controls src='Videos/Forthington%20Ba%20Bum%20Bum%20BUM%20SFX%20(Rhythm%20Heaven%20Fever).mp4'>Video not supported :( </video>
+            <figcaption>BA BUM BUM BUM</figcaption>
+          </figure>
+          
+        <li> <strong>&lt;a&gt;</strong> Creates a hyperlink on the text within the tags. Requires a <strong>href</strong> attribute. Can contain an image tag or nearly any other element instead of text. In this case, any text will be displayed if the image cannot load. The a stands for anchor! <a href='#page top'>This link</a> will take you to the top of the page!</li> 
+      </ul>
+      
+    <h2 id='basic attributes'>BASIC ATTRIBUTES</h2>
+      <ul>  
+        <li> <strong>id</strong> Used to add a name to content (such as divs) to specify when referencing them. </li>
+        <li> <strong>src</strong> Indicates the source file or URL of an image or video. </li>
+        <li> <strong>alt</strong> Contains alt text for an image. </li>
+        <li> <strong>width</strong> Sets the width of a video. </li>
+        <li> <strong>height</strong> Sets the height of a video. </li>
+        <li> <strong>controls</strong> Instructs the browser to include basic video controls (pause, play, and skip). </li>
+        <li><strong>href</strong> Determines the destination of a hyperlink. Can also link to the <strong>&lt;id&gt;</strong> of an element in the current document (using # before the <strong>&lt;id&gt;</strong>) or a new html file in the same folder as the current one (using ./ at the start of the address). </li>
+        <li><strong>target</strong> Determines where a link will be opened. A value of “_blank” will open in a new tab (or window, in an older browser). </li>
+      </ul>
+      
+    <h2 id='tables'>TABLES</h2>
+      <ul>
+        <li><strong>&lt;table&gt;</strong> Contains all tabular data, made up of the following tags:</li>
+          <ul>
+            <li><strong>&lt;tr&gt;</strong> Adds a table row. </li>
+            <li><strong>&lt;th&gt;</strong> Adds a table heading. Must be contained within a row. </li>
+            <li><strong>&lt;td&gt;</strong> Contains table data. Appears as columns. Must be contained within a row. </li>
+          </ul>
+        <li><strong>&lt;tbody&gt;</strong> Used to enclose all parts of a table outside of the head and foot.</li>
+        <li><strong>&lt;thead&gt;</strong> Used to section off a table’s head. Only for column headings! </li>
+        <li><strong>&lt;tfoot&gt;</strong> Used to section off the bottom of a table (such as for totals or other data results). </li>
+        <br>
+        <li><strong>scope</strong> Takes one of two values: <strong>row</strong> or <strong>col</strong>, making it clear which a heading applies to. </li>
+        <li><strong>rowspan</strong> Makes a table item take up multiple rows, set by an integer. </li>
+        <li><strong>colspan</strong> Makes a table item take up multiple columns, set by an integer. </li>
+      </ul>
+      
+      <h3>Example Table</h3>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">
+              This is a table heading!
+            </th>
+            <th colspan='2'>
+              This heading takes up 2 columns!
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Here's a bit of data. </td>
+            <td>Your data boxes will automatically resize unless you set them with CSS.</td>
+            <td>Make sure you have the same number of columns in each row!</td>
+          </tr>
+          <tr>
+            <td rowspan='2'>This data point takes up 2 rows!</td>
+            <td>Be sure to take into account any rowspans or colspans you've used. </td>
+            <td>When using rowspan, your next row should have fewer &lt;td&gt; elements to make up the difference. </td>
+          </tr>
+          <tr>
+            <td>You can leave also boxes empty, like this one -----></td>
+            <td></td>
+          </tr>      
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>Here's the footer, at the bottom.</td>
+            <td>It looks a lot like a regular row, but you can change that with CSS!</td>
+            <td>Use it for totals, results, and other stuff like that. </td>
+          </tr>  
+        </tfoot>
+      </table>
+      
+    <h2 id='forms'>FORMS</h2>
+      <ul>
+        <li><strong>&lt;form&gt;</strong> Creates a form, used to collect information and send it to an external source.* Requires the <strong>action</strong> and <strong>method</strong> attributes. </li>
+          <ul>
+            <li><strong>action</strong> Tells the form where to send the information. Can be a URL or another local document. </li>
+            <li><strong>method</strong> method Tells the form what to do with the information using an HTTP verb (i.e. PUT, GET, POST, DELETE, etc.).  <a href='https://discuss.codecademy.com/t/for-the-method-attribute-what-are-the-differences-between-post-and-get/481370/11' target="_blank">Here's more info on HTTP verbs!</a></li>
+          </ul>
+        <br>
+        <li><strong>&lt;input&gt;</strong> Creates an input field. Requires <strong>type</strong> and <strong>name</strong> attributes. Self-closing. </li>
+          <ul>
+            <li><strong>type</strong> Specifies what kind of input a field can accept. Default value is “text.” Other values include:</li>
+              <ul>
+                <li>number</li>
+                <li>password (replaces text with * automatically!)</li>
+                <li>range</li>
+                <li>checkbox**</li>
+                <li>radio**</li>
+                <li>submit (the input’s <strong>value</strong> will appear as the text on the submit button. If the input’s <strong>value</strong> is empty, “Submit” will appear as the default.) </li>
+              </ul>
+            <li><strong>name</strong> Names the input field. (Duh) </li>
+            <li><strong>value</strong> A built-in attribute that holds whatever is submitted in the input field. Can be assigned a default value. </li>
+            <li><strong>step</strong> Adds arrows/adjusts sliders to set the value incrementally.*** </li>
+            <li><strong>min</strong> Sets the minimum value for a numerical input. Warns the user when attempting to submit below the min. </li>
+            <li><strong>max</strong> Sets the maximum value for a numerical input. Warns the user when attempting to submit above the max. </li>
+            <li><strong>list</strong> Connects an input to a <strong>&lt;datalist&gt;</strong> when equal to the list’s <strong>id</strong>. </li>
+            <li><strong>placeholder</strong> Adds a value that can be typed over and won’t be submitted. </li>
+          </ul>
+        <li><strong>&lt;label&gt;</strong> Labels an <strong>&lt;input&gt;</strong> for the user. To associate the two, the <strong>&lt;input&gt;</strong> must have an <strong>id</strong> and the <strong>&lt;label&gt;</strong> must have a <strong>for</strong> attribute with the same value as the <strong>id</strong>. Bonus: clicking a label in the browser automatically selects the related input field! </li>
+          <ul>
+            <li><strong>for</strong> Connects a label to an input by holding the same value as the input’s <strong>id</strong>. </li>
+          </ul>
+        <br>
+        <li><strong>&lt;select&gt;</strong> Creates a dropdown list. By default, only one option can be selected. Requires a <strong>name</strong> attribute. </li>
+        <li><strong>&lt;datalist&gt;</strong> Creates a datalist for a text <strong>&lt;input&gt;</strong> to pull from. Must be connected via <strong>id</strong>. </li>
+        <li><strong>&lt;option&gt;</strong> Holds an option for a dropdown or datalist. Requires a <strong>value</strong> attribute. </li>
+        <li><strong>&lt;textarea&gt;</strong> Creates a larger area for text input. Any text between the tags will be set as the default. </li>
+          <ul>
+            <li><strong>rows</strong> Determines the number of rows in a text area. </li>
+            <li><strong>cols</strong> Determines the number of columns in a text area. </li>
+          </ul>
+      </ul>
+      
+    <aside>
+      <p class='notes'>*When a form is submitted, “<strong>name</strong>=<strong>value</strong>” for each input field will be sent to the location specified by the form’s <strong>action</strong>. 
+        <br>
+        <br>
+        **When using checkboxes or radio buttons, all name attributes should be the same for a category (i.e. all pizza topping options should be named “toppings”) while each id will correspond to the specific option (i.e. extra cheese, mushrooms, olives), which pairs with a &lt;label&gt;. Each checkbox should also have an assigned value that corresponds to its id. Only one radio button of each name group can be selected. 
+        <br>
+        <br>
+        ***When type=”number,” step takes a number to determine the step (i.e. step=”2” will increment by 2s). When type=”range,” step takes a number to determine how smoothly the slider moves, with low values being more fluid and high values being more noticeable. The actual value works the same as with numbers. 
+      </p>
+    </aside>
+      
+    <h4 id='form validation'>FORM VALIDATION</h4>
+      <p>A quick note: there are 2 kinds of validation! <em>Server-side</em> validation is when data is sent to an external machine for processing (as with login info, etc.), while <em>client-side</em> validation happens within the browser, saving time and protecting the server from potential malicious code or data. Everything covered on this page is <em>client-side validation.</em> </p>
+      <ul>
+        <li><strong>required</strong> Makes it so an input must be filled in before submitting the form. If the user attempts to submit anyway, the browser will show a notice like “please fill out this field.” </li>
+        <li><strong>minlength</strong> Sets the minimum character count for a text input. Warns the user if they attempt to submit under the limit. </li>
+        <li><strong>maxlength</strong> Sets the maximum character count for a text input. Won’t let the user type more than the maximum. </li>
+          <li><strong>pattern</strong> Sets a <em>regular expression</em> (<em>regex</em>) that an input must follow. For example, a regex of “[0-9]{14,16}” indicates a credit card number: a set of 14-16 numerals from 0-9. For another example, a regex of "[a-zA-Z0-9]+" limits the input to alphanumeric characters (i.e. no special characters like !?&*%) <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions' target="_blank">Helpful Link!</a> </li>
+      </ul>
+      
+    <h2 id='semantic html'>SEMANTIC HTML</h2>
+      <p>Semantic HTML is all about choosing elements based on their meaning. Therefore, tags like <strong>&lt;div&gt;</strong> or <strong>&lt;span&gt;</strong> are not semantic since they have no explicit meaning, and should be avoided in favor of alternatives like <strong>&lt;main&gt;</strong> or <strong>&lt;header&gt;</strong>. Why do we do this? There are several reasons, including accessibility, SEO (search engine optimization), and just making the code easier to understand. Most semantic tags have no effect on the visual presentation of the page, but help both people and machines understand the code better! </p>
+      <ul>
+        <li><strong>&lt;header&gt;</strong> Denotes a header, i.e. the content at the top of a page. </li> 
+        <li><strong>&lt;nav&gt;</strong> Denotes navigational links such as menus or tables of contents. Can be used inside a header or on its own. </li>
+        <li><strong>&lt;main&gt;</strong> Holds the main content of a page. </li>
+        <li><strong>&lt;footer&gt;</strong> Contains footer content such as copyright info, a sitemap, terms of use, contact info, or links to the top of the page. </li>
+        <li><strong>&lt;section&gt;</strong> Used to create sections like an introduction, contact info, chapters, or headings; anything where a more specific element can’t be found. A section should make sense in the outline of a document, whereas <strong>&lt;div&gt;</strong> is used for styling. </li>
+        <li><strong>&lt;article&gt;</strong> Contains an article (duh). </li>
+        <li><strong>&lt;aside&gt;</strong> Marks information that can enhance the main content but isn’t necessary to understand said content. I.e. bibliographies, end notes, comments, pull quotes, editorial sidebars, or additional information. </li>
+        <li><strong>&lt;figure&gt;</strong> Holds an image/illustration/diagram/code snippet referenced by the main document. </li>
+        <li><strong>&lt;figcaption&gt;</strong> Adds a caption to a figure. Typically goes inside the figure tag. </li>
+        <li><strong>&lt;audio&gt;</strong> Creates an audio element. Requires a <source>. Can include fallback content like videos. </li>
+        <li><strong>&lt;source&gt;</strong> Adds a source for an audio element using the <strong>src</strong> attribute. Can also include a <strong>type</strong> attribute with a value like “audio/mp3” to let the browser know what kind of file it is. You should probably include <strong>controls</strong> too. </li>
+          <ul>
+            <li><strong>autoplay</strong> Sets an audio or video file to play automatically. </li>
+            <li><strong>loop</strong> Sets an audio or video file to loop. </li>
+            <li><a href='https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio#attributes' target="_blank">More Audio Attributes!</a></li>
+          </ul>
+      </ul>
+        
+    </main> 
+  </body>
+    
+  <!-- Hey, you found the secret comment at the bottom of the page! Good for you! おめでとう!!-->
+</html>
