@@ -1,0 +1,48 @@
+* {
+    background-color: aliceblue
+}
+
+body {
+    color: rebeccapurple;
+    font-family: Verdana;
+    /*font-family: 'Mochiy Pop P One';*/
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: darkslateblue;
+    border: darkslateblue;
+    border-style: solid none;
+}
+
+h3 {
+    margin: 0px 0px 5px;
+}
+
+h4 {
+    margin: 0px 0px 5px;
+    font-size: 18px; 
+}
+
+video {
+    width:15%;
+}
+
+figcaption {
+    color: cornflowerblue;
+}
+
+table, th, td {
+    outline: 2px solid black;
+}
+
+label {
+    font-size: 14px;
+}
+
+.notes {
+    font-size: 12px;
+}
+
+#chippy {
+    width: 15%;
+}

@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>SCHLIAM'S COOL HTML REFERENCE PAGE</title>  
-    <link rel="stylesheet" href="Styles/tut_style.css">
+    <link rel="stylesheet" href="styles/tut_style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
@@ -70,13 +70,13 @@
       <ul>
         <li><strong>&lt;img&gt;</strong> (or &lt;/img&gt;) Displays an image. Self-closing. Requires a <strong>src</strong> attribute. </li>
           <figure>
-            <img src='Images/Chippy%20Idle%20Cropped.gif' id='chippy' alt='A gif of a dancing anthropomorphic poker chip.'>
+            <img src='images/chippy.gif' id='chippy' alt='A gif of a dancing anthropomorphic poker chip.'>
             <figcaption>You can use gifs, too!</figcaption>
           </figure>
           
         <li><strong>&lt;video&gt;</strong> Displays a video. Requires a <strong>src</strong> attribute. Can include text between tags that will show if the  video cannot load (such as “Video not supported”). </li>
           <figure>
-            <video controls src='Videos/Forthington%20Ba%20Bum%20Bum%20BUM%20SFX%20(Rhythm%20Heaven%20Fever).mp4'>Video not supported :( </video>
+            <video controls src='videos/forthington.mp4'>Video not supported :( </video>
             <figcaption>BA BUM BUM BUM</figcaption>
           </figure>
           
@@ -87,9 +87,9 @@
       <ul>  
         <li> <strong>id</strong> Used to add a name to content (such as divs) to specify when referencing them. </li>
         <li> <strong>src</strong> Indicates the source file or URL of an image or video. </li>
-        <li> <strong>alt</strong> Contains alt text for an image. </li>
-        <li> <strong>width</strong> Sets the width of a video. </li>
-        <li> <strong>height</strong> Sets the height of a video. </li>
+        <li> <strong>alt</strong> Contains alt text for an image. You should always include alt text since it makes the web more accessible to everyone! ❤️</li>
+        <li> <strong>width</strong> Sets the width of an element. </li>
+        <li> <strong>height</strong> Sets the height of an element. </li>
         <li> <strong>controls</strong> Instructs the browser to include basic video controls (pause, play, and skip). </li>
         <li><strong>href</strong> Determines the destination of a hyperlink. Can also link to the <strong>&lt;id&gt;</strong> of an element in the current document (using # before the <strong>&lt;id&gt;</strong>) or a new html file in the same folder as the current one (using ./ at the start of the address). </li>
         <li><strong>target</strong> Determines where a link will be opened. A value of “_blank” will open in a new tab (or window, in an older browser). </li>
@@ -208,8 +208,89 @@
         <li><strong>required</strong> Makes it so an input must be filled in before submitting the form. If the user attempts to submit anyway, the browser will show a notice like “please fill out this field.” </li>
         <li><strong>minlength</strong> Sets the minimum character count for a text input. Warns the user if they attempt to submit under the limit. </li>
         <li><strong>maxlength</strong> Sets the maximum character count for a text input. Won’t let the user type more than the maximum. </li>
-          <li><strong>pattern</strong> Sets a <em>regular expression</em> (<em>regex</em>) that an input must follow. For example, a regex of “[0-9]{14,16}” indicates a credit card number: a set of 14-16 numerals from 0-9. For another example, a regex of "[a-zA-Z0-9]+" limits the input to alphanumeric characters (i.e. no special characters like !?&*%) <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions' target="_blank">Helpful Link!</a> </li>
+          <li><strong>pattern</strong> Sets a <em>regular expression</em> (<em>regex</em>) that an input must follow. For example, a regex of “[0-9]{14,16}” indicates a credit card number: a set of 14-16 numerals from 0-9. For another example, a regex of "[a-zA-Z0-9]+" limits the input to alphanumeric characters (i.e. no special characters like !?&amp;*%) <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions' target="_blank">Helpful Link!</a> </li>
       </ul>
+        
+    <h3>Example Form</h3>
+      <form>
+        <input name='text' id='text' value='Text input!'>
+          <label for='text'>Basic text input with a default value</label>
+        <br>
+        <input type='number' name='number' id='number' max='20' min='1'>
+          <label for='number'>Number input with a max of 20 and a min of 1</label>
+        <br>
+        <input type='password' name='password' id='password' placeholder='password goes here'>
+          <label for='password'>Password input with a placeholder value</label>
+        <br>
+        <input type='range' name='range' id='range' step='1' max='10' min='1'>
+          <label for='range'>Range slider with a step value equal to 1</label>
+				<br>
+					
+					<label>Checkboxes! Note that you can check as many or as few as you like.</label>
+        <br>
+        <input type='checkbox' id='check1' name='checkbox' value='check1'>
+          <label for='check1'>Checkbox 1</label>
+        <br>
+        <input type='checkbox' id='check2' name='checkbox' value='check2'>
+          <label for='check2'>Checkbox 2</label>
+        <br>
+        <input type='checkbox' id='check3' name='checkbox' value='check3'>
+          <label for='check3'>Checkbox 3</label>
+        <br>
+        <input type='checkbox' id='check4' name='checkbox' value='check4'>
+          <label for='check4'>Checkbox 4</label>
+        <br>
+					
+					<label>Radio buttons! Note that you can only select one.</label>
+        <br>
+        <input type='radio' id='radio1' name='radio' value='radio1'>
+          <label for='radio1'>Radio 1</label>
+        <br>
+        <input type='radio' id='radio2' name='radio' value='radio2'>
+          <label for='radio2'>Radio 2</label>
+        <br>
+        <input type='radio' id='radio3' name='radio' value='radio3'>
+          <label for='radio3'>Radio 3</label>
+        <br>
+        <input type='radio' id='radio4' name='radio' value='radio4'>
+          <label for='radio4'>Radio 4</label>
+        <br>
+     
+        <input type='text' name='datalist' id='datalist' list='list'>
+          <label for='datalist'>Text input pulling from a datalist. Try typing in a programming language!</label>
+          <datalist id='list'>
+            <option>HTML</option>
+            <option>CSS</option>
+            <option>JavaScript</option>
+            <option>C</option>
+            <option>C+</option>
+            <option>C++</option>
+            <option>C#</option>
+            <option>Python</option>
+            <option>Java</option>
+            <option>Ruby</option>
+            <option>PHP</option>
+            <option>SQL</option>
+            <option>Swift</option>
+          </datalist>
+					
+        <br>
+        <select name='select'`>
+          <option>Option 1</option> 
+          <option>Option 2</option>  
+          <option>Option 3</option>  
+          <option>Option 4</option>  
+          <option>Option 5</option>  
+        </select>
+          <label for='select'>Dropdown select with 5 options</label>
+        <br>
+        <br>
+        <textarea rows='10' cols='40' name='textarea' id='textarea'>This is a BIG text box!</textarea>
+          <label for='textarea'>Textarea with 10 rows and 40 columns</label>
+        <br>
+        <input type='submit' name='submit' id='submit' value='Click to do nothing'>
+          <label for='submit'>Submit button! It won't actually submit anything since this form isn't functional, but it might refresh the page for you. </label>
+      </form>
       
     <h2 id='semantic html'>SEMANTIC HTML</h2>
       <p>Semantic HTML is all about choosing elements based on their meaning. Therefore, tags like <strong>&lt;div&gt;</strong> or <strong>&lt;span&gt;</strong> are not semantic since they have no explicit meaning, and should be avoided in favor of alternatives like <strong>&lt;main&gt;</strong> or <strong>&lt;header&gt;</strong>. Why do we do this? There are several reasons, including accessibility, SEO (search engine optimization), and just making the code easier to understand. Most semantic tags have no effect on the visual presentation of the page, but help both people and machines understand the code better! </p>
@@ -236,4 +317,5 @@
   </body>
     
   <!-- Hey, you found the secret comment at the bottom of the page! Good for you! おめでとう!!-->
+  <!-- As a reward, you get to see the first bit of HTML I ever wrote :) Just navigate your way to secret.html! -->
 </html>
